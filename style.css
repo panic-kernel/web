@@ -13,8 +13,17 @@ table{border-collapse:collapse;border-spacing:0} */
     #ffffff
 */
 
+.new{
+    border-bottom: 2px solid gray;
+    font-size: 25px;
+    color: black;
+}
+
 body{
     background-color: #ffffff;
+    margin: 0px;
+    position: fixed;
+    width: 100%;
 }
 
 .container{
@@ -60,7 +69,57 @@ a:hover{
     background-color: #479ecb;
     color: black;
     box-shadow: 5px 5px 2px 1px #a0a0a0;
+    animation: jump 2s ease 0s 1 normal forwards;
 }
+
+@keyframes jump {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 1;
+		transform: translateY(-45px);
+	}
+
+	24% {
+		opacity: 1;
+	}
+
+	40% {
+		animation-timing-function: ease-in;
+		transform: translateY(-24px);
+	}
+
+	65% {
+		animation-timing-function: ease-in;
+		transform: translateY(-12px);
+	}
+
+	82% {
+		animation-timing-function: ease-in;
+		transform: translateY(-6px);
+	}
+
+	93% {
+		animation-timing-function: ease-in;
+		transform: translateY(-4px);
+	}
+
+	25%,
+	55%,
+	75%,
+	87% {
+		animation-timing-function: ease-out;
+		transform: translateY(0px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+
+
 
 h1{
     font-size: 55px;
@@ -100,7 +159,7 @@ h2{
 
 .column{
     border: 2px solid #479ecb;
-    box-shadow: 10px 5px 2px 1px #a0a0a0;
+    box-shadow: 5px 5px 2px 1px #a0a0a0;
     width: 10%;
     height: 150px;
 }
